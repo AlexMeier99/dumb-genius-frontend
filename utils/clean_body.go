@@ -24,6 +24,7 @@ func CleanBody(body string) string {
 				re := regexp.MustCompile(`(?i)https:\/\/images\.(rapgenius|genius)\.com\/(images\/)?`)
 				pSrc := re.ReplaceAllString(src, "/images/")
 				s.SetAttr("src", pSrc)
+				s.SetAttr("loading", "lazy")
 			}
 		})
 

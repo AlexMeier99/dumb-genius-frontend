@@ -18,7 +18,7 @@ templ SearchPage(r data.SearchResults) {
 							<h2>Songs</h2>
 							for _, s := range s.Hits {
 								<a id="search-item" href={ templ.URL(s.Result.Path) }>
-									<img src={ data.ExtractImageURL(s.Result.Thumbnail) } alt="Song image"/>
+									<img src={ data.ExtractImageURL(s.Result.Thumbnail) } alt="Song image" loading="lazy"/>
 									<div>
 										<span>{ s.Result.ArtistNames }</span>
 										<h3>{ utils.TrimText(s.Result.Title,70) }</h3>
@@ -32,7 +32,7 @@ templ SearchPage(r data.SearchResults) {
 							<h2>Albums</h2>
 							for _, a := range s.Hits {
 								<a id="search-item" href={ templ.URL(utils.TrimURL(a.Result.URL)) }>
-									<img src={ data.ExtractImageURL(a.Result.AlbumImage) } alt="Album image"/>
+									<img src={ data.ExtractImageURL(a.Result.AlbumImage) } alt="Album image" loading="lazy"/>
 									<div>
 										<h3>{ utils.TrimText(a.Result.AlbumName, 70) }</h3>
 									</div>
@@ -45,7 +45,7 @@ templ SearchPage(r data.SearchResults) {
 							<h2>Artists</h2>
 							for _, a := range s.Hits {
 								<a id="search-item" href={ templ.URL(utils.TrimURL(a.Result.URL)) }>
-									<img src={ data.ExtractImageURL(a.Result.ArtistImage) } alt="Artist image"/>
+									<img src={ data.ExtractImageURL(a.Result.ArtistImage) } alt="Artist image" loading="lazy"/>
 									<div>
 										<h3>{ utils.TrimText(a.Result.ArtistName, 70) }</h3>
 									</div>

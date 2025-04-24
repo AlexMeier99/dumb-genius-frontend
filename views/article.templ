@@ -14,7 +14,7 @@ templ ArticlePage(a data.Article) {
 					{ a.PublishedAt.Format("2 Jan, 2006") }
 				</time>
 			</div>
-			<img id="article-image" src={ a.Image } alt="Article image"/>
+			<img id="article-image" src={ a.Image } alt="Article image" loading="lazy"/>
 			<h2 id="article-subtitle">{ a.Subtitle }</h2>
 			<div id="article-body">
 				@templ.Raw(a.HTML)
