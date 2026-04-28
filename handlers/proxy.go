@@ -38,7 +38,7 @@ func imageProxy(l *utils.Logger) http.HandlerFunc {
 			return
 		}
 
-		// first segment of URL resize the image to reduce bandwith usage.
+		// first segment of URL resize the image to reduce bandwidth usage.
 		url := fmt.Sprintf("https://t2.genius.com/unsafe/300x300/https://images.genius.com/%s.%s", f, ext)
 
 		res, err := utils.SendRequest(url)

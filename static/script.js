@@ -53,13 +53,13 @@ function getAnnotation(e) {
 	xhr.send();
 	xhr.onreadystatechange = function () {
 		if (this.readyState == 4 && this.status == 200) {
-			const parsedReponse = JSON.parse(this.responseText);
+			const parsedResponse = JSON.parse(this.responseText);
 			const annotationDiv = document.createElement("div");
-			annotationDiv.innerHTML = parsedReponse.body.html;
+			annotationDiv.innerHTML = parsedResponse.body.html;
 			annotationDiv.id = uri;
 			annotationDiv.className = "annotation";
 
-			if (parsedReponse.state !== "accepted") {
+			if (parsedResponse.state !== "accepted") {
 				annotationDiv.insertAdjacentHTML(
 					"afterbegin",
 					unreviewedAnnotation
