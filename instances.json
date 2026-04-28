@@ -43,13 +43,36 @@
 		"cdn": false
 	},
 	{
-		"clearnet": "https://dumb.gitro.xyz/",
-		"country": "DE",
-		"cdn": false
-	},
-	{
 		"clearnet": "https://dumb.jeikobu.net/",
 		"country": "DE",
 		"cdn": true
+	},
+	{
+		"clearnet": "https://dumb.canine.tools/",
+		"country": "US",
+		"cdn": false
+	},
+	{
+		"clearnet": "https://lyr.dc09.ru/",
+		"country": "RU",
+		"cdn": false
+	},
+	{
+		"clearnet": "https://db.kuuro.net",
+		"tor": "http://db.kuuro5abqix6tfku77wj32srkicgqh3f7ro77ctpda7ub7a7mlv4jsid.onion/",
+		"country": "US",
+		"cdn": false
+	},
+	{
+		"clearnet": "https://genius.fsky.io",
+		"tor": "http://geniusw3sdwpbz7ajx34qmqkozewdryhpwtcqk3ann332qtragcb3ead.onion/",
+		"country": "PL",
+		"cdn": false
+  },
+  {
+    "clearnet": "https://dumb.artemislena.eu",
+    "tor": "http://dumb.lpoaj7z2zkajuhgnlltpeqh3zyq7wk2iyeggqaduhgxhyajtdt2j7wad.onion",
+    "country": "DE",
+    "cdn": false
 	}
 ]
