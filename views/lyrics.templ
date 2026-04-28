@@ -10,7 +10,7 @@ templ LyricsPage(s data.Song) {
 	@layout(&LayoutOpts{title: fmt.Sprintf("%s - %s lyrics", s.Artist, s.Title)}) {
 		<div id="container" class="trio-split">
 			<div id="metadata">
-				<img id="album-artwork" src={ data.ExtractImageURL(s.Image) } alt="Song image" loading="lazy"/>
+				<img id="album-artwork" src={ data.ExtractImageURL(s.Image) } alt="Song image" loading="lazy" decoding="async"/>
 				<div id="metadata-info">
 					<a href={ templ.URL(s.ArtistPageURL) }>
 						<h2>{ s.Artist }</h2>
@@ -50,6 +50,7 @@ templ LyricsPage(s data.Song) {
 								src={ s.Album.Image }
 								alt="Album image"
 								loading="lazy"
+								decoding="async"
 							/>
 						</a>
 					</div>
